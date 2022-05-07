@@ -3,6 +3,8 @@ import { useWallet } from "../../hooks/useWallet";
 import { useTip, useJpyc, useUsdc } from "../../hooks/useContract";
 import { ethers } from "ethers";
 import { TipProps } from "./types";
+import { simpleRpcProvider } from "../../lib/web3";
+import { useNative } from "../../hooks/useContract";
 
 const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
   const [tipStatus, setTipStatus] = React.useState<"tip" | "confirm">("tip");
@@ -14,12 +16,24 @@ const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
   const tipContract = useTip();
   const jpycContract = useJpyc();
   const usdcContract = useUsdc();
+  const signer = useNative()
 
   const tip = async () => {
     const value = ethers.utils.parseEther(tipAmount).toString();
+
+    if (currency == "ASTR" || currency == "SBY") {
+      try {
+        const {hash: tx } = await signer.sendTransaction({to: artistWalletAddress, value: value})
+        setTipStatus("confirm")
+        setExplorer(`https://astar.subscan.io/tx/${tx}`) // Shibuyaのexploreはなさそう
+      } catch (err) {
+        setErrorMessage(err.message)
+      }
+      return
+    }
+
     const contract = currency == "JPYC" ? jpycContract : usdcContract;
     const allowance = await contract.allowance(account, tipContract.address);
-
     if (ethers.BigNumber.from(value).gt(allowance)) {
       await contract.approve(tipContract.address, value);
     }
@@ -104,9 +118,9 @@ const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
             </div>
           ) : (
             <div className="">
-              <p className="text-white text-base text-center">
-                Thank you!
-                <a href={explorer} className="underline">
+              <p className="text-black text-base text-center">
+                Thank you!&nbsp;
+                <a href={explorer} className="underline" target="_blank" rel="noreferrer">
                   Receipt
                 </a>
               </p>

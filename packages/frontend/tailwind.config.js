@@ -15,8 +15,8 @@ module.exports = {
         //
         // light color
         "marimo-1": "#D8F3DC", // bg1        
-        "marimo-2": "#E6F5EB", // bg2
-        "marimo-3": "#8ED4A7", // bg3
+        "marimo-2": "#E6F5EB", // bg2 薄め
+        "marimo-3": "#8ED4A7", // bg3 濃いめ
         "marimo-4": "#99D98C", // 帯の色
         "marimo-5": "#D9ED92", // ボタン
         "marimo-6": "#4B5563", // 黒色
