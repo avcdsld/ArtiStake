@@ -109,17 +109,7 @@ contract Chocomold is
         } else if (bytes(customBaseURI).length > 0) {
             return super.tokenURI(_tokenId);
         } else {
-            return
-                string(
-                    abi.encodePacked(
-                        defaultBaseURI,
-                        block.chainid.toString(),
-                        "/",
-                        abi.encodePacked(address(this)).toLiteralString(),
-                        "/",
-                        _tokenId.toString()
-                    )
-                );
+            return string(abi.encodePacked(defaultBaseURI, _tokenId.toString()));
         }
     }
 
