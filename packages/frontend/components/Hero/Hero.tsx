@@ -14,10 +14,10 @@ const Hero = () => {
         </div>
       </div>
       <p className="text-black lg:hidden marimo-tracking-hero text-center">STAKING FOR SOCIAL GOOD PROJECTS IN METAVERSE</p>
-      {/* <div className="bg-marimo-4 h-3" /> */}
-      {/* <div className="bg-marimo-3 h-6" />
-      <div className="bg-white flex items-center justify-center"> */}
-      <div className="bg-marimo-3 flex items-center justify-center flex-wrap">
+      <div className="bg-marimo-4 h-3" />
+      <div className="bg-marimo-3 h-6" />
+      <div className="bg-white flex items-center justify-center flex-wrap">
+      {/* <div className="bg-marimo-3 flex items-center justify-center flex-wrap"> */}
       {sdgsFileNames.map((v) => <div className="m-1" key={v}>
                                   <img className="w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]" src={v}/>
                                 </div>)}
