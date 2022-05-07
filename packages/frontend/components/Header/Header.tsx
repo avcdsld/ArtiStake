@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ isConnectWallet }) => {
   ];
 
   return (
-    <div className="flex justify-between w-full bg-marimo-3">
+    <div className="flex justify-between w-full bg-marimo-3 lg:py-1">
       <Head>
         <title>MetaverStake - Staking for Social Good Projects</title>
         <meta name="viewport" content="width=device-width" />
@@ -39,13 +39,15 @@ const Header: React.FC<HeaderProps> = ({ isConnectWallet }) => {
         <meta property="og:image" content="https://artistake.tokyo/assets/img/ogp.png" />
       </Head>
       <a href="/">
-        <img className="h-12 m-1 ml-2 py-1" src="/assets/img/MetaverStake_logo_white.png" />
+        <img className="ml-2 py-1 w-[150px] h-auto lg:h-12 lg:w-auto" src="/assets/img/MetaverStake_logo_white.png" />
       </a>
-      <div className="flex justify-end px-4 pt-4 py-2">
+      {/* 本来なら中央揃えするべきだが制御が聞かないためpt-3で代替 */}
+      <div className="flex justify-end px-4 lg:pt-3">
         {isConnectWallet && (
           <div className="overflow-hidden">
             {account ? (
-              <button className="text-black text-2xs lg:text-sm focus:outline-none">{account}</button>
+              // スマホのときはaccountのアドレスを省略表示しないとサービス名アイコンが縮小してしまう
+              <button className="text-black text-2xs lg:text-sm focus:outline-none align-middle">{account}</button>
             ) : (
               <button
                 // @ts-ignore:
@@ -61,15 +63,6 @@ const Header: React.FC<HeaderProps> = ({ isConnectWallet }) => {
           <FontAwesomeIcon className="cursor-pointer text-black ml-2 md:ml-8" icon={faBars} onClick={() => setIsNavigationOpen(!isNavigactionOpen)} />
         </div>
       </div>
-      {/* {!isNavigactionOpen && (
-               <div className="px-4 pt-4 py-2">
-                <FontAwesomeIcon
-                  className="cursor-pointer text-black ml-2 md:ml-8"
-                  icon={faBars}
-                  onClick={() => setIsNavigationOpen(!isNavigactionOpen)}
-                />
-              </div>
-      )} */}
       {isNavigactionOpen && (
         <div className="origin-top-right absolute right-0 text-right bg-marimo-1 z-50 bg-opacity-90">
           {navs.map((nav, index) => {

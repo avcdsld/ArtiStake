@@ -8,3 +8,4 @@ export const subgraphUrl =
   process.env.NODE_ENV == "development"
     ? "https://api.thegraph.com/subgraphs/name/aave/aave-v2-polygon-mumbai"
     : "https://api.thegraph.com/subgraphs/name/aave/aave-v2-matic";
+export const exploreTxUrl = "https://shibuya.subscan.io/extrinsic/"

@@ -79,7 +79,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Component {...pageProps} />
       <style jsx global>{`
         body {
-          background: #1c203c;
+          background: white;
         }
       `}</style>
     </Web3ReactProvider>

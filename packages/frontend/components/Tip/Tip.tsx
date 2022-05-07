@@ -3,6 +3,8 @@ import { useWallet } from "../../hooks/useWallet";
 import { useTip, useJpyc, useUsdc } from "../../hooks/useContract";
 import { ethers } from "ethers";
 import { TipProps } from "./types";
+import { useNative } from "../../hooks/useContract";
+import { exploreTxUrl } from "../../lib/env"
 
 const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
   const [tipStatus, setTipStatus] = React.useState<"tip" | "confirm">("tip");
@@ -14,19 +16,31 @@ const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
   const tipContract = useTip();
   const jpycContract = useJpyc();
   const usdcContract = useUsdc();
+  const signer = useNative()
 
   const tip = async () => {
     const value = ethers.utils.parseEther(tipAmount).toString();
+
+    if (currency == "ASTR" || currency == "SBY") {
+      try {
+        const {hash: tx } = await signer.sendTransaction({to: artistWalletAddress, value: value})
+        setTipStatus("confirm")
+        setExplorer(exploreTxUrl + `${tx}`)
+      } catch (err) {
+        setErrorMessage(err.message)
+      }
+      return
+    }
+
     const contract = currency == "JPYC" ? jpycContract : usdcContract;
     const allowance = await contract.allowance(account, tipContract.address);
-
     if (ethers.BigNumber.from(value).gt(allowance)) {
       await contract.approve(tipContract.address, value);
     }
     try {
       const { hash: tx } = await tipContract.tip(contract.address, artistWalletAddress, value);
       setTipStatus("confirm");
-      setExplorer(`https://polygonscan.com/tx/${tx}`);
+      setExplorer(exploreTxUrl + `${tx}`)
     } catch (err) {
       setErrorMessage(err.message);
     }
@@ -101,15 +115,36 @@ const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
               <button onClick={tip} className="w-24 h-8 bg-marimo-5 hover:opacity-75 text-black font-bold rounded-r-lg">
                 Tip
               </button>
+              <div className="text-center mt-2">
+                <button
+                  // @ts-ignore:
+                  onClick={() => setCurrency("")}
+                  className="px-4 py-1 hover:opacity-75 text-black rounded-lg bg-gray-200"
+                >
+                  Back
+                </button>
+              </div>              
             </div>
           ) : (
             <div className="">
-              <p className="text-white text-base text-center">
-                Thank you!
-                <a href={explorer} className="underline">
+              <p className="text-black text-base text-center">
+                Thank you!&nbsp;
+                <a href={explorer} className="underline" target="_blank" rel="noreferrer">
                   Receipt
                 </a>
               </p>
+              <div className="text-center mt-2">
+                <button
+                  // @ts-ignore:
+                  onClick={() => {
+                    setCurrency("")
+                    setTipStatus("tip")}
+                  }
+                  className="px-4 py-1 hover:opacity-75 text-black rounded-lg bg-gray-200"
+                >
+                  Back
+                </button>
+              </div>
             </div>
           )}
           <div>

@@ -4,8 +4,13 @@
 
 @layer utilities {
   .marimo-tracking-hero {
+    letter-spacing: 0.2em;
+    margin-x: -0.1em;
+    font-size: 0.1rem
+  }
+  .marimo-tracking-hero-lg {
     letter-spacing: 0.4em;
-    margin-right: -0.4em;
+    margin-x: -0.2em;
   }
 }
 
