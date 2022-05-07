@@ -115,6 +115,15 @@ const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
               <button onClick={tip} className="w-24 h-8 bg-marimo-5 hover:opacity-75 text-black font-bold rounded-r-lg">
                 Tip
               </button>
+              <div className="text-center mt-2">
+                <button
+                  // @ts-ignore:
+                  onClick={() => setCurrency("")}
+                  className="px-4 py-1 hover:opacity-75 text-black rounded-lg bg-gray-200"
+                >
+                  Back
+                </button>
+              </div>              
             </div>
           ) : (
             <div className="">
@@ -124,6 +133,18 @@ const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
                   Receipt
                 </a>
               </p>
+              <div className="text-center mt-2">
+                <button
+                  // @ts-ignore:
+                  onClick={() => {
+                    setCurrency("")
+                    setTipStatus("tip")}
+                  }
+                  className="px-4 py-1 hover:opacity-75 text-black rounded-lg bg-gray-200"
+                >
+                  Back
+                </button>
+              </div>
             </div>
           )}
           <div>
