@@ -9,16 +9,17 @@ const Hero = () => {
         <div className="w-full overflow-hidden">
           <div className="flex flex-col items-center mx-auto">
             <img className="w-full" src="/assets/img/MetaverStake_top_title.png" />
-            <p className="text-black text-xs absolute bottom-2 marimo-tracking-hero">STAKING FOR SOCIAL GOOD PROJECTS IN METAVERSE</p>
+            <p className="text-black absolute text-xs bottom-2 invisible lg:visible marimo-tracking-hero-lg">STAKING FOR SOCIAL GOOD PROJECTS IN METAVERSE</p>
           </div>
         </div>
       </div>
+      <p className="text-black lg:hidden marimo-tracking-hero text-center">STAKING FOR SOCIAL GOOD PROJECTS IN METAVERSE</p>
       {/* <div className="bg-marimo-4 h-3" /> */}
       {/* <div className="bg-marimo-3 h-6" />
       <div className="bg-white flex items-center justify-center"> */}
-      <div className="bg-marimo-3 flex items-center justify-center">
-      {sdgsFileNames.map((v) => <div className="m-1 mt-2" key={v}>
-                                  <img className="w-[60px] h-[60px]" src={v}/>
+      <div className="bg-marimo-3 flex items-center justify-center flex-wrap">
+      {sdgsFileNames.map((v) => <div className="m-1" key={v}>
+                                  <img className="w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]" src={v}/>
                                 </div>)}
       </div>
     </>  
