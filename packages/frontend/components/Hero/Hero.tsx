@@ -17,14 +17,9 @@ const Hero = () => {
       {/* <div className="bg-marimo-3 h-6" />
       <div className="bg-white flex items-center justify-center"> */}
       <div className="bg-marimo-3 flex items-center justify-center">
-      {sdgsFileNames.map((v) =>  <div className="m-1 mt-2">
-                                    <Image
-                                      src={v}
-                                      alt={v}
-                                      width={60}
-                                      height={60}
-                                    />
-                                  </div>)}
+      {sdgsFileNames.map((v) => <div className="m-1 mt-2" key={v}>
+                                  <img className="w-[60px] h-[60px]" src={v}/>
+                                </div>)}
       </div>
     </>  
   );
