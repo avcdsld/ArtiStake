@@ -39,7 +39,7 @@ exports.projects = functions.https.onRequest((req, res) => {
 });
 
 exports.mint = functions.https.onRequest((req, res) => {
-  const toAddress = req.body['to'];
+  const toAddress = req.query.to;
   functions.logger.debug("mint", { toAddress });
 
   // TODO: Verify if the user staked

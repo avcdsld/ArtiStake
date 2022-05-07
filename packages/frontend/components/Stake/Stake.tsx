@@ -86,9 +86,10 @@ const Stake: React.FC<StakeProps> = ({ artistWalletAddress }) => {
       return;
     }
 
-    const apiBase = "https://us-central1-metaverstake.cloudfunctions.net";
+    // const apiBase = "https://us-central1-metaverstake.cloudfunctions.net";
+    const apiBase = "http://localhost:5001/metaverstake/us-central1";
     try {
-      const { data: txData } = await axios.post(`${apiBase}/mint`, { to: account });
+      const { data: txData } = await axios.post(`${apiBase}/mint?to=${account}`);
       alert(`Minting has started. txHash: ${txData.txHash}`);
 
       // setTippers(tipper);
