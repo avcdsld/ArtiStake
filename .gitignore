@@ -133,3 +133,5 @@ packages/contracts/deployments
 .firebase
 
 .envrc
+
+.runtimeconfig.json

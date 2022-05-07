@@ -4,4 +4,8 @@ const rpc = process.env.NODE_ENV == "development"
   ? "https://rpc.shibuya.astar.network:8545"
   : "https://rpc.shibuya.astar.network:8545" // TODO:
 
-module.exports = { networkId, rpc };
+const astarNetworkId = 592; // Astar
+
+const astarRpc = "https://rpc.astar.network:8545";
+
+module.exports = { networkId, rpc, astarNetworkId, astarRpc };

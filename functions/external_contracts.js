@@ -840,6 +840,22 @@ const jpycAbi = [
   },
 ];
 
+const nftAbiForMint = [
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_to",
+        "type": "address"
+      }
+    ],
+    "name": "mint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+];
+
 module.exports = {
   81: {
     contracts: {
@@ -847,6 +863,12 @@ module.exports = {
       stake: { address: "0x1A65738efdEf636D8533436d3Eb0d8ca1cf00Fa1", abi: stakeAbi },
       jpyc: { address: "0x6AE7Dfc73E0dDE2aa99ac063DcF7e8A63265108c", abi: jpycAbi }, // dummy
       usdc: { address: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174", abi: jpycAbi }, // dummy
+      nft: { address: "0x972FDcf0Cd43C22F29e8FA704B7B64ADb611365d", abi: nftAbiForMint }
+    },
+  },
+  592: {
+    contracts: {
+      nft: { address: "0x28882b1dEc016a143aC0e21ab004f587ac6FC768", abi: nftAbiForMint },
     },
   },
   // 137: {

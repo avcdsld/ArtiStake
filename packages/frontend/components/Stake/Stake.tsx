@@ -80,6 +80,24 @@ const Stake: React.FC<StakeProps> = ({ artistWalletAddress }) => {
     setStakeAmount(event.target.value);
   };
 
+  const mint = async () => {
+    if (!account) {
+      (connectWallet as () => void)();
+      return;
+    }
+
+    const apiBase = "https://us-central1-metaverstake.cloudfunctions.net";
+    try {
+      const { data: txData } = await axios.post(`${apiBase}/mint`, { to: account });
+      alert(`Minting has started. txHash: ${txData.txHash}`);
+
+      // setTippers(tipper);
+    } catch (err) {
+      console.log(err);
+    }
+    // setIsModalOpen(true);
+  };
+
   // TODO: Supprt Astar
   const getSupporter = async () => {
     setIsModalOpen(true);
@@ -142,7 +160,7 @@ const Stake: React.FC<StakeProps> = ({ artistWalletAddress }) => {
           <br /> {Number(apy) * 100}%
         </p>
         <div className="flex justify-center items-center">
-          <button className="text-black py-2 px-4 rounded-lg text-lg border h-12" onClick={getSupporter}>
+          <button className="text-black py-2 px-4 rounded-lg text-lg border h-12" onClick={mint}>
             Mint NFT
           </button>
         </div>
