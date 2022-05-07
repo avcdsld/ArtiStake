@@ -3,8 +3,8 @@ import { useWallet } from "../../hooks/useWallet";
 import { useTip, useJpyc, useUsdc } from "../../hooks/useContract";
 import { ethers } from "ethers";
 import { TipProps } from "./types";
-import { simpleRpcProvider } from "../../lib/web3";
 import { useNative } from "../../hooks/useContract";
+import { exploreTxUrl } from "../../lib/env"
 
 const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
   const [tipStatus, setTipStatus] = React.useState<"tip" | "confirm">("tip");
@@ -25,7 +25,7 @@ const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
       try {
         const {hash: tx } = await signer.sendTransaction({to: artistWalletAddress, value: value})
         setTipStatus("confirm")
-        setExplorer(`https://astar.subscan.io/tx/${tx}`) // Shibuyaのexploreはなさそう
+        setExplorer(exploreTxUrl + `${tx}`)
       } catch (err) {
         setErrorMessage(err.message)
       }
@@ -40,7 +40,7 @@ const Tip: React.FC<TipProps> = ({ artistWalletAddress }) => {
     try {
       const { hash: tx } = await tipContract.tip(contract.address, artistWalletAddress, value);
       setTipStatus("confirm");
-      setExplorer(`https://polygonscan.com/tx/${tx}`);
+      setExplorer(exploreTxUrl + `${tx}`)
     } catch (err) {
       setErrorMessage(err.message);
     }
