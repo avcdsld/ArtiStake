@@ -159,8 +159,8 @@ const Stake: React.FC<StakeProps> = ({ artistWalletAddress }) => {
           APY
           <br /> {Number(apy) * 100}%
         </p>
-        <div className="flex justify-center items-center">
-          <button className="text-black py-2 px-4 rounded-lg text-lg border h-12" onClick={mint}>
+        <div className="flex justify-center items-center pb-2">
+          <button className="text-black pb-0.5 px-4 rounded-lg text-lg border h-10 text-center bg-marimo-5 hover:opacity-75" onClick={mint}>
             Mint NFT
           </button>
         </div>

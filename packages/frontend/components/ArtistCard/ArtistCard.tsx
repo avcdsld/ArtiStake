@@ -10,11 +10,11 @@ const ArtistCard: React.FC<ArtistCardProps> = ({ index, name, description, avata
         <img className="rounded-full w-12 h-12" src={avatar} />
         <div className="ml-4">
           <p className="text-black text-md mb-2">{name}</p>
-          <p className="text-black h-20 text-xs">{description}</p>
+          <p className="text-black h-[130px] lg:h-[100px] project-card">{description}</p>
         </div>
       </div>
       <div>
-        <img className="w-64 h-64 mx-auto" src={thumbnail} />
+        <img className="lg:w-64 lg:h-64 w-[200px] h-[200px] mx-auto" src={thumbnail} />
       </div>
     </div>
   );
