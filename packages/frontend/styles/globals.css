@@ -12,6 +12,9 @@
     letter-spacing: 0.4em;
     margin-x: -0.2em;
   }
+  .project-card {
+    font-size: 0.1rem
+  }
 }
 
 .about-my-work {
