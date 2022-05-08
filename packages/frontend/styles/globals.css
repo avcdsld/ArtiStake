@@ -13,6 +13,9 @@
     margin-x: -0.2em;
   }
   .project-card {
+    font-size: 10px
+  }
+  .project-card-lg {
     font-size: 0.1rem
   }
 }
