@@ -42,7 +42,7 @@ module.exports = {
       gasPrice: 8000000000,
     },
     shibuya: {
-      url: "https://rpc.shibuya.astar.network:8545",
+      url: "https://shibuya-api.bwarelabs.com/43c7b8f5-1163-4636-8b12-edf327553d34",
       accounts: [privateKey],
       gas: 13000000,
       gasPrice: 12000000000,
