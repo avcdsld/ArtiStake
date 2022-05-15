@@ -13,5 +13,5 @@ mywork: "/assets/img/artists_metaverstake/micro_plastic/aboutMyWork.png"
 galleryTumbnail: "/assets/img/artists_metaverstake/micro_plastic/gallery.png"
 shopTumbnail: "/assets/img/artists_metaverstake/Metaverse_img.png"
 galleryUrl: "https://www.theguardian.com/environment/2022/mar/24/microplastics-found-in-human-blood-for-first-time"
-shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmZWzyPE6BauSDEidrTjwvuJoxN83HkD8CjGZveRDoB6QD/"
+shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmbPkzFuR9uJbc4YgvK6iubCkc1UYFyZrKkpvzB1eCh7tP/"
 ---

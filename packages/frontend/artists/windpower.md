@@ -18,5 +18,5 @@ mywork: "/assets/img/artists_metaverstake/windpower/aboutMyWork.jpg"
 galleryTumbnail: "/assets/img/artists_metaverstake/windpower/gallery.png"
 shopTumbnail: "/assets/img/artists_metaverstake/Metaverse_img.png"
 galleryUrl: "https://www.windpowerengineering.com/"
-shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmZWzyPE6BauSDEidrTjwvuJoxN83HkD8CjGZveRDoB6QD/"
+shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmbPkzFuR9uJbc4YgvK6iubCkc1UYFyZrKkpvzB1eCh7tP/"
 ---

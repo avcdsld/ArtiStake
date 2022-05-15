@@ -17,5 +17,5 @@ mywork: "/assets/img/artists_metaverstake/solarpower/aboutMyWork.png"
 galleryTumbnail: "/assets/img/artists_metaverstake/solarpower/gallery.png"
 shopTumbnail: "/assets/img/artists_metaverstake/Metaverse_img.png"
 galleryUrl: "https://www.energy.gov/eere/solar/how-does-solar-work"
-shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmZWzyPE6BauSDEidrTjwvuJoxN83HkD8CjGZveRDoB6QD/"
+shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmbPkzFuR9uJbc4YgvK6iubCkc1UYFyZrKkpvzB1eCh7tP/"
 ---

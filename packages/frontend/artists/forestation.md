@@ -26,5 +26,5 @@ mywork: "/assets/img/artists_metaverstake/forestation/aboutMyWork.png"
 galleryTumbnail: "/assets/img/artists_metaverstake/forestation/gallery.png"
 shopTumbnail: "/assets/img/artists_metaverstake/Metaverse_img.png"
 galleryUrl: "https://www.nature.com/articles/d41586-021-01143-3"
-shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmZWzyPE6BauSDEidrTjwvuJoxN83HkD8CjGZveRDoB6QD/"
+shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmbPkzFuR9uJbc4YgvK6iubCkc1UYFyZrKkpvzB1eCh7tP/"
 ---

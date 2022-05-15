@@ -20,5 +20,5 @@ mywork: "/assets/img/artists_metaverstake/tsubaki_revolution/aboutMyWork.jpg"
 galleryTumbnail: "/assets/img/artists_metaverstake/tsubaki_revolution/gallery.png"
 shopTumbnail: "/assets/img/artists_metaverstake/Metaverse_img.png"
 galleryUrl: "https://zenbird.media/tsubaki-revolution-rediscovering-us-and-nature-through-camellia/"
-shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmZWzyPE6BauSDEidrTjwvuJoxN83HkD8CjGZveRDoB6QD/"
+shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmbPkzFuR9uJbc4YgvK6iubCkc1UYFyZrKkpvzB1eCh7tP/"
 ---

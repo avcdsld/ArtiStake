@@ -21,5 +21,5 @@ mywork: "/assets/img/artists_metaverstake/geothermal/aboutMyWork.png"
 galleryTumbnail: "/assets/img/artists_metaverstake/geothermal/gallery.png"
 shopTumbnail: "/assets/img/artists_metaverstake/Metaverse_img.png"
 galleryUrl: "https://www.eia.gov/energyexplained/geothermal/geothermal-power-plants.php"
-shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmZWzyPE6BauSDEidrTjwvuJoxN83HkD8CjGZveRDoB6QD/"
+shopUrl: "https://marimogateway.mypinata.cloud/ipfs/QmbPkzFuR9uJbc4YgvK6iubCkc1UYFyZrKkpvzB1eCh7tP/"
 ---
