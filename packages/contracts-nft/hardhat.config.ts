@@ -40,7 +40,7 @@ const config: HardhatUserConfig = {
       gasPrice: 1000000000,
     },
     shibuya: {
-      url: "https://shibuya-api.bwarelabs.com/43c7b8f5-1163-4636-8b12-edf327553d34",
+      url: "https://shibuya.blastapi.io/3bd64e3f-5e8a-4b2f-842d-bcbe3c9180e4",
       // url: "https://rpc.shibuya.astar.network:8545",
       accounts: [privateKey],
       gas: 2100000,

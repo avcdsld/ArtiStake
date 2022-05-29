@@ -25,7 +25,10 @@ const MyApp = ({ Component, pageProps }) => {
                   symbol: "SBY",
                   decimals: 18,
                 },
-                rpcUrls: ["https://shibuya-api.bwarelabs.com/43c7b8f5-1163-4636-8b12-edf327553d34", "https://rpc.shibuya.astar.network:8545"],
+                rpcUrls: [
+                  "https://shibuya.blastapi.io/3bd64e3f-5e8a-4b2f-842d-bcbe3c9180e4",
+                  "https://rpc.shibuya.astar.network:8545",
+                ],
                 blockExplorerUrls: ["https://shibuya.subscan.io/"],
               },
             ]

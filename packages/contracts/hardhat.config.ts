@@ -42,7 +42,7 @@ module.exports = {
       gasPrice: 8000000000,
     },
     shibuya: {
-      url: "https://shibuya-api.bwarelabs.com/43c7b8f5-1163-4636-8b12-edf327553d34",
+      url: "https://shibuya.blastapi.io/3bd64e3f-5e8a-4b2f-842d-bcbe3c9180e4",
       accounts: [privateKey],
       gas: 13000000,
       gasPrice: 12000000000,
